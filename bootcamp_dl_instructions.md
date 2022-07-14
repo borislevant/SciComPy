@@ -1,5 +1,6 @@
 # Applied-KamaTech Bootcamp
 ## Data Engineering, Deep-Learning part
+## Questions: anna_levant@amat.com, boris_levant@amat.com
 ## July 14, 2022
 
 During the previous 2 weeks, all the groups created a new data set, extending the CIFAR-10, adding a few new classes into it. Most groups had the data set in the form of the CSV file, while each row represented the filepath to the picture and the labels. We are ready for the next missions
