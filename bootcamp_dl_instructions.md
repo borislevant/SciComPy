@@ -59,5 +59,7 @@ Modify the following parts:
 
 3. Add the validations set (the original notebook uses only train/test sets)
 
+Pay attention that if everything works smoothly, it should take ~10 sec per epoch to train your data. However, if you don't use GPU, then the train can take more than 3 min per epoch
+
 # Good luck!
 
