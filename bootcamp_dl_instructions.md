@@ -33,7 +33,7 @@ drive.mount('/content/drive')
 5. Load the data using the following lines of code. Note that *loaded_data* is a "dictionary-type" object and you access it's values by names you specified in the *savez* command
 
 ```
-loaded_data = np.load('cfar10_modified_1000.npz')
+loaded_data = np.load('/content/drive/MyDrive/cfar10_modified_1000.npz')
 loaded_data['train']
 ```
 
