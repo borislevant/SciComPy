@@ -9,10 +9,27 @@ During the previous 2 weeks, all the groups created a new data set, extending th
 The goal of this part is to prepare the data for train, load it into the Cloud (to be able to access it from the Google Colabatory) and to train our first Neural Network with GPUs
 
 1. Once you created the Numpy arrays of Train, Validation and Test, save them into the binary file/s using the following command:
+
+```
 np.savez('cfar10_modified.npz', train=x_train, ytrain=y_train, val=x_validation, yval=y_validation, test=x_test, ytest=y_test)
+```
 
 2. Press the lower button in the leftmost menu:
-![image](https://user-images.githubusercontent.com/36374917/178928953-4370e4e1-8187-4032-886e-10c33c92364e.png)
+
+![Files](https://user-images.githubusercontent.com/36374917/178928953-4370e4e1-8187-4032-886e-10c33c92364e.png)
+
+3. In the menu opened, press the Mount Drive button:
+
+![Mount Drive](https://user-images.githubusercontent.com/36374917/178930872-29de6338-8080-4602-ab39-4ce3e217bb88.png)
+
+4. Run the Code cell that were created:
+
+```
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+
 
 
 Our next mission is to train the
