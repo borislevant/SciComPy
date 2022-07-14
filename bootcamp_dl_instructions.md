@@ -17,7 +17,7 @@ Upload the new created file into your own Google Drive. You can use the GMail ac
 
 2. Press the lower button in the leftmost menu:
 
-![Files](https://user-images.githubusercontent.com/36374917/178928953-4370e4e1-8187-4032-886e-10c33c92364e.png)
+![image](https://user-images.githubusercontent.com/36374917/178933736-eb68b0be-0061-4618-90ec-bcda90da556b.png)
 
 3. In the menu opened, press the Mount Drive button:
 
