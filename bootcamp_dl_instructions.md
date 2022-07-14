@@ -4,7 +4,7 @@
 
 During the previous 2 weeks, all the groups created a new data set, extending the CIFAR-10, adding a few new classes into it. Most groups had the data set in the form of the CSV file, while each row represented the filepath to the picture and the labels. We are ready for the next missions
 
-## Train the first neural network
+## Load the data into Cloud and open it inside the Google Collab notebook
 
 The goal of this part is to prepare the data for train, load it into the Cloud (to be able to access it from the Google Colabatory) and to train our first Neural Network with GPUs
 
@@ -13,6 +13,7 @@ The goal of this part is to prepare the data for train, load it into the Cloud (
 ```
 np.savez('cfar10_modified.npz', train=x_train, ytrain=y_train, val=x_validation, yval=y_validation, test=x_test, ytest=y_test)
 ```
+Upload the new created file into your own Google Drive. You can use the GMail account of the group or your private account
 
 2. Press the lower button in the leftmost menu:
 
@@ -29,17 +30,34 @@ from google.colab import drive
 drive.mount('/content/drive')
 ```
 
+5. Load the data using the following lines of code. Note that *loaded_data* is a "dictionary-type" object and you access it's values by names you specified in the *savez* command
 
+```
+loaded_data = np.load('cfar10_modified_1000.npz')
+loaded_data['train']
+```
 
+## Enable the GPU in Google Collab notebook
 
-Our next mission is to train the
-[![Azure Notebooks](https://notebooks.azure.com/launch.png)](https://notebooks.azure.com/yoavram/libraries/SciComPy) 
-[![Official website](https://img.shields.io/badge/Website-SciComPy-orange.svg)](https://scicompy.yoavram.com)
+In order to enable the GPU in your Google Collab notebooks please follow the instructions:
 
-## Syllabus
+1. In the Notebook menu choose **Runtime-->Choose runtime type** command
 
-Python is a leading programming language for scientific research, data science, and machine learning. Thia course will familiarize students with the Python scientific stack and with best practices for scientific computing using methods from dynamical systems, stochastic processes, classical statistics, numerical analysis, Bayesian statistics, and artificial neural networks.
+2. In the window choose the **Hardware accelerator type** as GPU
 
-Every class will present a scientific problem, a computational method for tackling it, and a Python implementation of the method. Examples will include performing predicting points in tennis matches and survival on the Titanic, modelling evolutionary dynamics and infectious diseases, finding stationary points for a predator-prey system, inference in animal social networks, and classification of handwritten digits.
+![image](https://user-images.githubusercontent.com/36374917/178932894-fe8b688e-2ed0-4905-93e7-38af5c193b9f.png)
 
-## Book
+## Train the first Neural Network
+
+Inside Google Collab open the notebook *https://github.com/borislevant/SciComPy/blob/master/cifar10-with-cnn-for-beginer.ipynb*
+
+Modify the following parts:
+
+1. Load your own data from the Google Drive
+
+2. Update the number of classes according to your data
+
+3. Add the validations set (the original notebook uses only train/test sets)
+
+# Good luck!
+
